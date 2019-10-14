@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- google fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> -->
+ <!-- font awesome -->
+ <link rel="stylesheet" href="css/all.css">
+  <title>Runo's Boiler Plate</title>
+</head>
+<body>
+
+
+  <!-- Header -->
+
+  <Header>
+
+  </Header>
+  
+  <!-- /Header -->
+
+
+
+  <!-- Main -->
+  <main class="container">
+    <!-- Section -->
+      <section class="featured-delicacies-section">
+          <div class="row mx-auto align-items-center justify-content-center featured-delicacy-items" id="featured-delicacy-items">
+              <!-- single item -->
+              <div class="col-10 col-sm-6 col-lg-3 max-auto my-1 store-item sweets" data-item="sweets">
+                  <div class="card single-item">
+                      <div class="img-container">
+                         <img src="img/chin-chin.jpg" class="card-img-top store-img" alt="">
+                         <span class="store-item-icon">
+                             <i class="fas fa-shopping-cart"></i>
+                         </span>
+                         <span class="item-price">
+                            10 - 20 mins
+                         </span>
+                      </div>
+                      <div class="card-body">
+                          <div class="card-text text-capitalize">
+                           <h5 id="store-item-name">Egusi Soup <span class="by">By</span> <span class="restaurant">Rodina Foods</span></h5>
+                           <hr>
+                           <h5 class="store-item-value"><strong class="font-weight-bold" id="store-item-price">N4,500</strong></h5>
+                           <hr>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+               <!-- end of single item -->
+              <!-- single item -->
+              <div class="col-10 col-sm-6 col-lg-3 max-auto my-1 store-item sweets" data-item="sweets">
+                  <div class="card single-item">
+                      <div class="img-container">
+                         <img src="img/rice.jpg" class="card-img-top store-img" alt="">
+                         <span class="store-item-icon">
+                             <i class="fas fa-shopping-cart"></i>
+                         </span>
+                         <span class="item-price">
+                            10 - 20 mins
+                         </span>
+                      </div>
+                      <div class="card-body">
+                          <div class="card-text text-capitalize">
+                           <h5 id="store-item-name">Egusi Soup <span class="by">By</span> <span class="restaurant">Rodina Foods</span></h5>
+                           <hr>
+                           <h5 class="store-item-value"><strong class="font-weight-bold" id="store-item-price">N4,500</strong></h5>
+                           <hr>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+               <!-- end of single item -->
+              <!-- single item -->
+              <div class="col-10 col-sm-6 col-lg-3 max-auto my-1 store-item sweets" data-item="sweets">
+                  <div class="card single-item">
+                      <div class="img-container">
+                         <img src="img/ewa.jpg" class="card-img-top store-img" alt="">
+                         <span class="store-item-icon">
+                             <i class="fas fa-shopping-cart"></i>
+                         </span>
+                         <span class="item-price">
+                            10 - 20 mins
+                         </span>
+                      </div>
+                      <div class="card-body">
+                          <div class="card-text text-capitalize">
+                           <h5 id="store-item-name">Egusi Soup <span class="by">By</span> <span class="restaurant">Rodina Foods</span></h5>
+                           <hr>
+                           <h5 class="store-item-value"><strong class="font-weight-bold" id="store-item-price">N4,500</strong></h5>
+                           <hr>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+               <!-- end of single item -->
+              <!-- single item -->
+              <div class="col-10 col-sm-6 col-lg-3 max-auto my-1 store-item sweets" data-item="sweets">
+                  <div class="card single-item">
+                      <div class="img-container">
+                         <img src="img/soup-1.jpg" class="card-img-top store-img" alt="">
+                         <span class="store-item-icon">
+                             <i class="fas fa-shopping-cart"></i>
+                         </span>
+                         <span class="item-price">
+                            10 - 20 mins
+                         </span>
+                      </div>
+                      <div class="card-body">
+                          <div class="card-text text-capitalize">
+                           <h5 id="store-item-name">Egusi Soup <span class="by">By</span> <span class="restaurant">Rodina Foods</span></h5>
+                           <hr>
+                           <h5 class="store-item-value"><strong class="font-weight-bold" id="store-item-price">N4,500</strong></h5>
+                           <hr>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+               <!-- end of single item -->
+          </div>
+        </section>
+        <!-- /Section -->
+  </main>
+ 
+
+  <!-- /Main -->
+   
+
+
+  <!-- Footer -->
+
+  <footer>
+
+  </footer>
+
+  <!-- /Footer -->
+
+  <!-- jquery -->
+ <script src="js/jquery-3.3.1.min.js"></script>
+ <!-- bootstrap js -->
+ <script src="js/bootstrap.bundle.min.js"></script>
+ <!-- script js -->
+ <script src="js/app.js"></script>
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+
