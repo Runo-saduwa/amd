@@ -9,135 +9,195 @@
   <!-- main css -->
   <link rel="stylesheet" href="css/main.css">
   <!-- google fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet"> 
  <!-- font awesome -->
  <link rel="stylesheet" href="css/all.css">
-  <title>Runo's Boiler Plate</title>
+  <title>AMDfooddeliveries - Welcome</title>
 </head>
 <body>
 
 
-  <!-- Header -->
+      <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
+                <div class="container">
+                    <section> 
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html">AMDfooddeliveries</a>
+                    </section>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="sign-in.html">Login/Logout</a>
+                                  </li>
+                                </ul>
+                        </div>
 
-  <Header>
+                        <div class="cart-btn mr-4 my-1">
+                            <span class="nav-icon">
+                              <i class="fas fa-cart-plus"></i>
+                            </span>
+                            <div class="cart-items">0</div>
+                          </div>
+                        </div>
+                  </nav>
 
-  </Header>
+                  <!-- End of Navigation -->
+
+                <!-- Header -->
+                  <header class="hero container mt-5">
+
+                    <div class="row mx-auto justify-content-center align-items-center">
+                      <div class="col-10 col-lg-6">
+                        <div class="hero-section">
+                          <h1>Fast Delivery</h1>
+                           <h5>From your favorite restaurants</h5>
+                           <p class="text-muted">Search, Order, Enjoy.</p>
+                           <a class="explore" href="#restaurants">explore restaurants</a>
+                        </div>
+                      </div>
+
+                      <div class="col-10 col-lg-6">
+                       <img class="hero-img" src="./img/takeout2.jpeg" alt="">
+                      </div>
+                    </div>
+
+                  </header>
+             <!-- End of Header -->
   
-  <!-- /Header -->
+
+<!-- Restaurants section -->
+  <section class="restaurants mt-5" id="restaurants">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"><path fill="#E02055" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,192C384,203,480,181,576,160C672,139,768,117,864,128C960,139,1056,181,1152,202.7C1248,224,1344,224,1392,224L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+      <h1 class="text-center mb-5 section-header">Restaurants</h1>
+
+      
+        <div class="container">
+                <div class="restaurants-center row mx-auto align-items-center justify-content-center" id="restaurants">
+                        <!-- restaurants goes here -->
+
+                        <!-- Loader -->
+                        <div class="lds-dual-ring"></div>
+                        <!-- /Loader -->
+                </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#E02055" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,192C384,203,480,181,576,160C672,139,768,117,864,128C960,139,1056,181,1152,202.7C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </section>
+
+  <!-- End of Restaurants section -->
 
 
 
   <!-- Main -->
-  <main class="container">
+  <main class="custom-container">
+      <h1 class="text-center section-header my-5">Featured Dishes</h1>
+      <!-- Filter -->
+      <div class="row">
+        <div class="col-lg-6 col-10 mx-auto">
+         <div class="input-group restaurants-search my-5">
+           <select class="custom-select restaurants-search" id="inputGroupSelect04" aria-label="Example select with button addon">
+             <option selected>Choose...</option>
+             <option value="all">all</option>
+             <option value="soup">soup</option>
+             <option value="meat">meat</option>
+             <option value="drinks">drinks</option>
+             <option value="swallow">swallow</option>
+             <option value="snacks">snacks</option>
+             <option value="protein">protein</option>
+           </select>
+           <div class="input-group-append">
+             <button class="btn text-white search-box selectButton" type="button">
+               <i class="fas fa-search"></i>
+             </button>
+           </div>
+         </div>
+        </div>
+      </div>
+
+      <!-- /Filter -->
+
     <!-- Section -->
       <section class="featured-delicacies-section">
-          <div class="row mx-auto align-items-center justify-content-center featured-delicacy-items" id="featured-delicacy-items">
-              <!-- single item -->
-              <div class="col-10 col-sm-6 col-lg-3 max-auto my-1 store-item sweets" data-item="sweets">
-                  <div class="card single-item">
-                      <div class="img-container">
-                         <img src="img/chin-chin.jpg" class="card-img-top store-img" alt="">
-                         <span class="store-item-icon">
-                             <i class="fas fa-shopping-cart"></i>
-                         </span>
-                         <span class="item-price">
-                            10 - 20 mins
-                         </span>
-                      </div>
-                      <div class="card-body">
-                          <div class="card-text text-capitalize">
-                           <h5 id="store-item-name">Egusi Soup <span class="by">By</span> <span class="restaurant">Rodina Foods</span></h5>
-                           <hr>
-                           <h5 class="store-item-value"><strong class="font-weight-bold" id="store-item-price">N4,500</strong></h5>
-                           <hr>
-                          </div>
-                      </div>
-                  </div>
-               </div>
-               <!-- end of single item -->
-              <!-- single item -->
-              <div class="col-10 col-sm-6 col-lg-3 max-auto my-1 store-item sweets" data-item="sweets">
-                  <div class="card single-item">
-                      <div class="img-container">
-                         <img src="img/rice.jpg" class="card-img-top store-img" alt="">
-                         <span class="store-item-icon">
-                             <i class="fas fa-shopping-cart"></i>
-                         </span>
-                         <span class="item-price">
-                            10 - 20 mins
-                         </span>
-                      </div>
-                      <div class="card-body">
-                          <div class="card-text text-capitalize">
-                           <h5 id="store-item-name">Egusi Soup <span class="by">By</span> <span class="restaurant">Rodina Foods</span></h5>
-                           <hr>
-                           <h5 class="store-item-value"><strong class="font-weight-bold" id="store-item-price">N4,500</strong></h5>
-                           <hr>
-                          </div>
-                      </div>
-                  </div>
-               </div>
-               <!-- end of single item -->
-              <!-- single item -->
-              <div class="col-10 col-sm-6 col-lg-3 max-auto my-1 store-item sweets" data-item="sweets">
-                  <div class="card single-item">
-                      <div class="img-container">
-                         <img src="img/ewa.jpg" class="card-img-top store-img" alt="">
-                         <span class="store-item-icon">
-                             <i class="fas fa-shopping-cart"></i>
-                         </span>
-                         <span class="item-price">
-                            10 - 20 mins
-                         </span>
-                      </div>
-                      <div class="card-body">
-                          <div class="card-text text-capitalize">
-                           <h5 id="store-item-name">Egusi Soup <span class="by">By</span> <span class="restaurant">Rodina Foods</span></h5>
-                           <hr>
-                           <h5 class="store-item-value"><strong class="font-weight-bold" id="store-item-price">N4,500</strong></h5>
-                           <hr>
-                          </div>
-                      </div>
-                  </div>
-               </div>
-               <!-- end of single item -->
-              <!-- single item -->
-              <div class="col-10 col-sm-6 col-lg-3 max-auto my-1 store-item sweets" data-item="sweets">
-                  <div class="card single-item">
-                      <div class="img-container">
-                         <img src="img/soup-1.jpg" class="card-img-top store-img" alt="">
-                         <span class="store-item-icon">
-                             <i class="fas fa-shopping-cart"></i>
-                         </span>
-                         <span class="item-price">
-                            10 - 20 mins
-                         </span>
-                      </div>
-                      <div class="card-body">
-                          <div class="card-text text-capitalize">
-                           <h5 id="store-item-name">Egusi Soup <span class="by">By</span> <span class="restaurant">Rodina Foods</span></h5>
-                           <hr>
-                           <h5 class="store-item-value"><strong class="font-weight-bold" id="store-item-price">N4,500</strong></h5>
-                           <hr>
-                          </div>
-                      </div>
-                  </div>
-               </div>
-               <!-- end of single item -->
+          <div class="products-center row mx-auto align-items-center justify-content-center featured-delicacy-items" id="featured-delicacy-items">
+           <!-- Products goes here -->
           </div>
         </section>
         <!-- /Section -->
   </main>
- 
 
   <!-- /Main -->
+
+  <!-- Cart Overlay -->
+
+   <!-- cart -->
+   <div class="cart-overlay">
+        <div class="cart">
+          <span class="close-cart"><i class="far fa-window-close"></i></span>
+
+          <div class="card bg-danger h-5 mb-3">
+            <div class="d-flex justify-content-between">
+              <span class="address m-3">24, Church road, Effurun</span>
+              <a href="" class="edit m-3">Edit</a>
+            </div>
+            <div class="d-flex justify-content-between mt-5">
+             <span class="time-circle m-3 d-flex justify-content-center align-items-center ">
+                
+                        10mins
+        
+             </span>
+             <a href="" class="edit-time mt-4 mx-3">Choose time</a>
+            </div>
+          </div>
+          <h2>your cart</h2>
+          <div class="cart-content">
+            <!-- cart item -->
+            <!-- <div class="cart-item">
+              <img src="./images/product-1.jpeg" alt="product" />
+              <div>
+                <h4>queen bed</h4>
+                <h5>$9.00</h5>
+                <span class="remove-item">remove</span>
+              </div>
+              <div>
+                <i class="fas fa-chevron-up"></i>
+                <p class="item-amount">
+                  1
+                </p>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div> -->
+            <!-- cart item -->
+          </div>
+          <div class="cart-footer d-flex justify-content-between">
+            <h3>Total :</h3> <h3 class="cart-total">0</h3>
+          </div>
+       
+
+          <div class="cart-footer-2 row justify-content-center mb-5">
+                <button class="clear-cart btn btn-lg mx-2 px-4">clear cart</button>
+                <button class="btn btn-lg px-4">Checkout</button>
+          </div>
+        </div>
+
+       
+      </div>
+
+  <!-- /Cart Overlay -->
    
 
 
   <!-- Footer -->
 
-  <footer>
-
+  <footer class="p-5">
+         <div class="row">
+           <div class="col-md-4">
+              <h6 class="text-center"> &copy;  <a class="footer-link" href="index.html">AMDfooddeliveries</a></h6>
+           </div>
+         </div>
   </footer>
 
   <!-- /Footer -->
@@ -148,10 +208,9 @@
  <script src="js/bootstrap.bundle.min.js"></script>
  <!-- script js -->
  <script src="js/app.js"></script>
-  <script>
-    // Get the current year for the copyright
-    $('#year').text(new Date().getFullYear());
-    // Init Scrollspy
+    <script>
+
+       // Init Scrollspy
     $('body').scrollspy({ target: '#main-nav' });
     // Smooth Scrolling
     $("#main-nav a").on('click', function (event) {
@@ -166,7 +225,8 @@
         });
       }
     });
-  </script>
+    </script>
+  
 </body>
 </html>
 
