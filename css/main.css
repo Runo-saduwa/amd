@@ -8,7 +8,13 @@
  * {
    font-family: 'Bree Serif', serif;
  }
+.hide {
+  display: none;
+}
 
+.show {
+  display: block;
+}
 :root {
     --mainPink: #E02055;
     --mainYellow: #EDB615; 
@@ -19,6 +25,11 @@
     --yellowTrans: rgba(249, 228, 148, 0.5);
     --mainGrey: rgb(238, 238, 238);
     --blackTrans: rgba(0,0,0, 0.5);
+  }
+
+  .nav-link {
+    border: none;
+    background: #fff;
   }
 .yellow-heading {
    color: #f59600;

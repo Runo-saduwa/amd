@@ -12,7 +12,12 @@ const resProductsDOM = document.querySelector(".resprod-center");
 const selectInput = document.querySelector('.custom-select');
 
 const restaurantDOM = document.querySelector(".restaurants-center");
+
+
 let cart = [];
+
+
+
 
 
 const getRestaurants = async () => {
@@ -458,6 +463,10 @@ const filterBtn = document.querySelectorAll('.filter-btn');
         });
       })
     })
+
+
+
+  
     
 
 

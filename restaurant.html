@@ -182,7 +182,10 @@
 
           <div class="cart-footer-2 row justify-content-center mb-5">
                 <button class="clear-cart btn btn-lg mx-2 px-4">clear cart</button>
-                <button class="btn btn-lg px-4">Checkout</button>
+                <form>
+                    <script src="https://js.paystack.co/v1/inline.js"></script>
+                    <button class="btn btn-lg px-4" type="button" onclick="payWithPaystack()"> Check Out </button> 
+                  </form>
           </div>
         </div>
 
@@ -212,8 +215,70 @@
  <script src="js/bootstrap.bundle.min.js"></script>
  <!-- script js -->
  <script src="js/restaurant.js"></script>
- 
-<script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+
+<script>
+    function payWithPaystack(){
+      var handler = PaystackPop.setup({
+        key: 'pk_test_f6b6bbcb7be41d00a8573410336e166a67bae98d',
+        email: 'customer@email.com',
+        amount: 1000,
+        currency: "NGN",
+        ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+        firstname: 'Stephen',
+        lastname: 'King',
+        // label: "Optional string that replaces customer email"
+        metadata: {
+           custom_fields: [
+              {
+                  display_name: "Mobile Number",
+                  variable_name: "mobile_number",
+                  value: "+2348012345678"
+              }
+           ]
+        },
+       
+        callback: function(response){
+            // alert('success. transaction ref is ' + response.reference);
+             const orders = localStorage.getItem('cart');
+             const price = JSON.parse(orders).reduce((sum, order) => {
+               return sum + order.price
+             },0)
+             console.log(price)
+            $.ajax({
+             
+            url:'http://www.yoururl.com/file.php?reference=' + response.reference,
+            method: 'post',
+            success: function (data) {
+             //Do whatever you like
+           
+             localStorage.setItem('cart', JSON.stringify([]));
+             $.ajax({
+             url:'/orders' ,
+             data: {orders, price},
+             method: 'post',
+              success: function (data) {
+              //redirect to dashboard
+              console.log(orders)
+             
+             alert('transaction successful')
+       
+        window.location.href = '/orders';
+    }
+  })
+
+    }
+  })
+        }
+        ,
+        onClose: function(){
+            alert('window closed');
+        }
+      });
+      handler.openIframe();
+    }
+  </script>
 	
   
 </body>
